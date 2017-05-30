@@ -74,4 +74,7 @@ fun main(args: Array<String>) {
     user = User("admin")
     user = User("admin", "@znds.com")
 
+    //直接调用java-class： User2
+    var user2 = User2("stone")
+
 }
