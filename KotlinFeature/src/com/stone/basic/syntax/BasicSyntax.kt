@@ -9,7 +9,7 @@ package com.stone.basic.syntax
 class BasicSyntax {
 
     //Function having two Int parameters with Int return type:
-    fun sum(a: Int, b: Int): Int {
+    public fun sum(a: Int, b: Int): Int {//访问修饰符 省略时，默认为 public
         return a + b
     }
 
@@ -47,7 +47,7 @@ class BasicSyntax {
     fun minOf(a: Int, b: Int): Int = if (a < b) a else b
 
     //字符串转int
-    fun parseInt(str: String): Int? {// ? 表示可以为空
+    private fun parseInt(str: String): Int? {// ? 表示可以为空
         return str.toIntOrNull(8)//参数为 进制数(radix), 不传默认为10   转换错误 返回null
     }
 
@@ -118,7 +118,7 @@ class BasicSyntax {
             println("fits in range")
         }
 
-        for (x in 1..5) {
+        for (x in 1..5) {//include 5
 
         }
 
@@ -130,6 +130,9 @@ class BasicSyntax {
             println("x in 9 downTo 0 step 3: $x")
         }
 
+        for (x in 0 until 10 step 2) {//until 10 ： not include 10
+            println("x in 1 until 10: $x")
+        }
     }
 
     //Checking if a collection contains an object using in operator:
@@ -151,9 +154,11 @@ class BasicSyntax {
 //        }
 
         val list = (1..10).toList() //上面的 简写
+        IntRange(1, 10).toList()  // (1..10) 就是IntRange   还有其它的 LongRange CharRange
         list.filter { it % 2 == 0 }.map { it * 3 }.forEach(::println)
 //      list.filter { it % 2 == 0 }.map { it * 3 }.forEach{ println("item is $it")}
     }
+
 }
 
 fun main(args: Array<String>) {
@@ -182,5 +187,7 @@ fun main(args: Array<String>) {
     base.contains()
 
     base.collectionsLambda()
-    
+
+
+
 }
