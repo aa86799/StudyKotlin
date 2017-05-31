@@ -82,6 +82,8 @@ class Complex {
         } catch (e: ArithmeticException) {
             e.printStackTrace()
             throw Exception()
+        } finally {
+
         }
         println("try-catch-> $result") //print: result = kotlin.Unit
     }
