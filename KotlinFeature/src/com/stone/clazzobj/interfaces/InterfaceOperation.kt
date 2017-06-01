@@ -1,4 +1,4 @@
-package com.stone.interfaces
+package com.stone.clazzobj.interfaces
 
 /**
  * desc  :
