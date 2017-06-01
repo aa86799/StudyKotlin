@@ -32,10 +32,10 @@ fun breakContinueReturn() {
     println("do sth.")
 }
 
-//使用标签 label@ 限制 break或continue的跳转
+//使用标签 label@ 限制 break或continue、return的跳转
 fun labelJump() {
     loop@ for (i in 1..3) {
-        inner@for (j in 1..3) {
+        inner@ for (j in 1..3) {
             if (i == 1 && j == 3) {
                 continue@inner
             }
@@ -64,8 +64,8 @@ fun labelJump() {
     }
 
     var x = 3
-    aa@for (i in 1..x) {
-        b@for (j in 1..4) {
+    aa@ for (i in 1..x) {
+        b@ for (j in 1..4) {
             if (i == 2 && j == 1) {
                 break@aa
             }
