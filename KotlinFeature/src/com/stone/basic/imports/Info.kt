@@ -1,4 +1,4 @@
-package com.stone.basic.packages
+package com.stone.basic.imports
 import kotlin.*
 //import static java.lang.Math  //Kotlin 不支持
 /**
@@ -30,9 +30,7 @@ private fun HAA() {
     checkNotNull("")
 }
 
-//protected fun HBB() {// protected不能用顶级函数声明
-//
-//}
+
 
 fun HCC() {//public
 
