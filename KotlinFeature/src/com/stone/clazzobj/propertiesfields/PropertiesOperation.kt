@@ -1,6 +1,6 @@
 package com.stone.clazzobj.propertiesfields
 
-import kotlin.reflect.jvm.internal.impl.javax.inject.Inject
+//import kotlin.reflect.jvm.internal.impl.javax.inject.Inject
 
 /**
  * desc  :
@@ -38,7 +38,7 @@ class PropertiesOperation(size: Int) {
     var setterVisibility: String = "abc"
         private set // the setter is private and has the default implementation
     var setterWithAnnotation: Any? = null
-        @Inject set // annotate the setter with Inject
+        /*@Inject*/ set // annotate the setter with Inject
 
     /*
     使用 field 关键字，指代它所在的属性。它仅能在 属性的 get或set中使用

@@ -1,6 +1,6 @@
 package com.stone.clazzobj.constructors
 
-import kotlin.reflect.jvm.internal.impl.javax.inject.Inject
+//import kotlin.reflect.jvm.internal.impl.javax.inject.Inject
 
 /**
  * desc  :
@@ -27,7 +27,7 @@ class Person6(name: String) {//主构造函数中的参数初始化，也可以�
 }
 
 //如果主构造函数前有可见性修饰符或注解，就一定需要加上constructor 关键字
-class Person7 private @Inject constructor(name:String, age: Int)
+class Person7 private/* @Inject*/ constructor(name:String, age: Int)
 
 /*
 当有其它构造函数，依赖主构造函数，形如 constructor(...) : this(...)
