@@ -67,7 +67,13 @@ open class AbsBase {
 }
 abstract class AbsDerived: AbsBase() {
 //    override fun f() {} //直接重写
-    override abstract fun f() //抽象重写
+    override abstract fun f() //抽象重写，还是需要子类重写
+}
+
+class StableDerived : AbsDerived() {
+    override fun f() {
+
+    }
 }
 
 /*

@@ -13,7 +13,7 @@ class Person2 constructor(val firstName: String) { }
 class Person3 constructor(var firstName: String) { }
 class Person4(firstName: String) { } //如果主构造函数没有任何注解或可见性修饰符,构造函数关键字可以省略
 
-class Person5(name: String) {//主构造函数中，不能有初始化代码；可放在init{}中
+class Person5(name: String) {//若主构造函数中，不进行初始化, 可放在init{}中
     val name: String
     init {
         println("initialize")
@@ -61,4 +61,10 @@ class 中可以有：
 fun main(args: Array<String>) {
     val per9 = Person9("stone")
 
+    TT(3)
+    TT(3, 4)
+}
+class TT {//没有在类名后定义主构造函数
+    constructor(a: Int)
+    constructor(a: Int, b:Int) : this(a)
 }

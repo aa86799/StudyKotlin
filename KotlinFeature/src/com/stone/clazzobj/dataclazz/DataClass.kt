@@ -21,8 +21,8 @@ open class Human(id: Int) {
     }
 }
 /*
-data class 不能有 abstract, open, sealedclazz or inner
-如果类中实现或重写了某个函数后，将不会再自动生成了
+data class 不能有 abstract, open, sealed or inner
+如果类中实现或重写了某个函数后，那这个函数就不会再自动生成了
  */
 data class User(val id: Int, val name: String, var age: Int): Human(id) {
     var weight: Float = 0.0f
@@ -34,7 +34,6 @@ data class User(val id: Int, val name: String, var age: Int): Human(id) {
 //        return "User"
 //    }
 }
-
 
 fun main(args: Array<String>) {
     val u = User(1, "stone", 28)
