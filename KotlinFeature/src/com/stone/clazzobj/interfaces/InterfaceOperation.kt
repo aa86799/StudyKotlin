@@ -7,11 +7,12 @@ package com.stone.clazzobj.interfaces
  * time  : 01/06/2017 14 03
  */
 /*
-接口在Kot非常类似于Java 8。它们可以包含抽象方法声明，以及实现方法。
+接口在Kotlin中非常类似于Java 8。它们可以包含抽象方法声明，以及实现方法。
 他们不同于抽象类的地方：接口不能存储状态。他们可以有属性，但这些需要抽象或提供访问器实现。
  */
 
-interface MyInterface { fun bar()
+interface MyInterface {
+    fun bar()
     val prop: Int // abstract  val，子类重写get
     val propertyWithImplementation: String get() = "foo"  //自实现get
 
@@ -21,20 +22,21 @@ interface MyInterface { fun bar()
 //    var proper:Int //abstract  var, 子类重写get、set
 
     fun foo() {
-
+        println("foo")
     }
 }
 
 class Child : MyInterface {
     override val prop: Int
         get() = 0x10
-
-//    override var proper: Int
-//        get() = proper
-//        set(value) {proper = value}
+//        set(value) {prop = value}  //接口属性不能有setter
 
     override fun bar() {
 
+    }
+
+    override fun foo() {
+        println("Child.foo")
     }
 }
 
@@ -62,11 +64,19 @@ class D : A, B {
 }
 
 fun main(args: Array<String>) {
+    val m = object : MyInterface {
+        override fun bar() {
+            println(prop)
+        }
+
+        override val prop: Int
+            get() = -1
+    }
+    m.foo()
+    m.bar()
+
     var child = Child()
     println(child.prop)
-
-//    child.proper = 8
-//    println(child.proper)
 
     var d = D()
     d.foo()
