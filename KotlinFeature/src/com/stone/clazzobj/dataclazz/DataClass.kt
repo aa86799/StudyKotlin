@@ -21,9 +21,11 @@ open class Human(id: Int) {
     }
 }
 /*
-data class 不能有 abstract, open, sealed or inner
+data class 声明时，前面不能有 abstract, open, sealed or inner
 如果类中实现或重写了某个函数后，那这个函数就不会再自动生成了
+必须声明主构造函数，且至少有一个参数
  */
+//data class DataTest
 data class User(val id: Int, val name: String, var age: Int): Human(id) {
     var weight: Float = 0.0f
     constructor(id: Int, weight: Float) : this(id, "", 18) {
