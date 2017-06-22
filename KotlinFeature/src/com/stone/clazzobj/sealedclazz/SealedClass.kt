@@ -32,16 +32,27 @@ sealed class Expr {
 data class Const(val number: Double) : Expr()
 data class Sum(val e1: Expr, val e2: Expr) : Expr()
 object NotANumber : Expr()
+//class NotANumber : Expr()
 
 fun eval(expr: Expr): Double = when (expr) {
     is Const -> expr.number
+    NotANumber -> {
+        println("非double: " + Double.NaN)
+        Double.NaN } //这里省去了else ，跟这是一个单例对象有关；
     is Sum -> eval(expr.e1) + eval(expr.e2)
-    NotANumber -> Double.NaN //这里省去了else ，可能跟这是一个单例对象有关； 这里的省略语法不是很清晰
+//    else -> {
+//        println("非double: " + Double.NaN)
+//        Double.NaN
+//    }
 }
 
 fun main(args: Array<String>) {
 //    val expr = Expr() //cannot be instantiated
-    eval(Const(3.3))
-    eval(Sum(Const(1.2), Const(2.3)))
+    val a = eval(Const(3.3))
+    println(a)
 
+    val b = eval(Sum(Const(1.2), Const(2.3)))
+    println(b)
+
+    eval(NotANumber)
 }
