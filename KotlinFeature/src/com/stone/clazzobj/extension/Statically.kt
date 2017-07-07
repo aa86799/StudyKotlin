@@ -1,7 +1,7 @@
 package com.stone.clazzobj.extension
 
 /**
- * desc  :
+ * desc  : 扩展同名函数；
  * author: stone
  * email : aa86799@163.com
  * time  : 01/06/2017 16 20
@@ -27,7 +27,7 @@ fun print(a: A) {
 }
 
 /*
-扩展函数与原类的成员，如果函数名、参数类型， 则 成员函数胜出
+扩展函数与原类的成员，如果函数名、参数类型相同， 则原成员函数胜出
  */
 class E {
     fun foo() { println("member") }
