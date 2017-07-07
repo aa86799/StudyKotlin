@@ -24,8 +24,19 @@ fun <T> MutableList<T>.swap2(index1: Int, index2: Int) {
     this[index2] = tmp
 }
 
+class TXY {
+    fun MutableList<Int>.swap22(index1: Int, index2: Int) {
+
+    }
+
+    fun test() {
+        val list = mutableListOf(1, 3, 2)
+        list.swap22(1, 2)
+    }
+}
 fun main(args: Array<String>) {
     val list = mutableListOf(1, 3, 2)
     list.swap(1, 2)
+//    list.swap22(1, 2)// 扩展函数即使在一个公共类中，也不能影响全局，只能类的内部使用
     list.forEach(::println)
 }
