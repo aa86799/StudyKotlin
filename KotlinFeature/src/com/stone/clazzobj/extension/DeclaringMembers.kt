@@ -31,7 +31,7 @@ class DN {
     }
 
     /*
-    在扩展函数中 调用 外问类的 函数 this@class
+    在扩展函数中 调用 外部类的 函数 this@class
      */
     fun DM.to() {
         toString()
@@ -57,11 +57,11 @@ open class CE {
 }
 class CF: CE() {
     override fun DE.foo() {
-        println("DE.foo in CF")
+        println("DE.foo1 in CF")
     }
 
     override fun DF.foo() {
-        println("DF.foo in CF")
+        println("DF.foo1 in CF")
     }
 }
 
@@ -71,7 +71,5 @@ fun main(args: Array<String>) {
 
     CF().called(DE())  //DE.foo in CF
     CF().called(DF())  //DE.foo in CF
-
-
 }
 
