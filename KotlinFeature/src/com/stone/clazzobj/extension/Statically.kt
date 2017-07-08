@@ -1,7 +1,7 @@
 package com.stone.clazzobj.extension
 
 /**
- * desc  : 扩展同名函数；
+ * desc  : 静态的扩展同名函数；
  * author: stone
  * email : aa86799@163.com
  * time  : 01/06/2017 16 20
