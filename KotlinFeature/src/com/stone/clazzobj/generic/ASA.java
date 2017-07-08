@@ -7,4 +7,7 @@ package com.stone.clazzobj.generic;
  * time  : 12/06/2017 13 36
  */
 public class ASA {
+    void foo() {
+        System.out.println("AAA");
+    }
 }
