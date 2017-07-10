@@ -116,6 +116,7 @@ fun main(args: Array<String>) {
 
     val vs = arrayOf(Sup()) // ? super Chi  ==> Sup
     fill(vs, Chi())
+//    fill(vs, Sup())
 
     val list = mutableListOf(ASA(), BSB())
     Tes().covariant(list)
@@ -179,5 +180,14 @@ fun main(args: Array<String>) {
     rList.forEach { print(it + "\t") }
 }
 
+//fun <T> singletonList(item: T): List<T> { // ...
+//
+//}
 
+//fun cccx() {
+//    val l = singletonList(1)
+//}
 
+fun <T: Any?> sdfs():T? {
+    return null
+}
