@@ -25,3 +25,9 @@ class Outer2 {//类似java的普通内部类与初始化，内问类直接持有
     }
 }
 val demo2 = Outer2().Inner().foo()
+
+class Comb {
+    companion object {} // 类似java中的静态内部类， 默认类名 Companion ；外部访问其内部成员时，可以省略Companion类名
+//    companion object {} //Companion 类 只能建立一个
+    object ABC{} //object 声明类， 是一个单例类，上面的Companion也是
+}
