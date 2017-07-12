@@ -8,16 +8,6 @@ package com.stone.clazzobj.objectclz
  */
 
 
-//以 object: 来对应java中 匿名内部类的声明
-//window.addMouseListener(object : MouseAdapter() {
-//    override fun mouseClicked(e: MouseEvent) {
-//        // ...
-//    }
-//    override fun mouseEntered(e: MouseEvent) {
-//        // ...
-//    }
-//})
-
 open class A(x: Int) {
     open val y: Int = x
 }
