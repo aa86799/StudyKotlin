@@ -31,3 +31,37 @@ class Comb {
 //    companion object {} //Companion 类 只能建立一个
     object ABC{} //object 声明类， 是一个单例类，上面的Companion也是
 }
+
+
+class MouseEvent
+interface MouseAdapter {
+    fun mouseClicked(e: MouseEvent)
+    fun mouseEntered(e: MouseEvent)
+}
+fun addAdapter(adapter: MouseAdapter) {}
+//以 object: 来对应java中 匿名内部类的声明
+fun load() {
+    addAdapter(object : MouseAdapter {
+        override fun mouseClicked(e: MouseEvent) {
+            // ...
+        }
+        override fun mouseEntered(e: MouseEvent) {
+            // ...
+        }
+    })
+
+}
+
+
+fun main(args: Array<String>) {
+//    val action = object:  MyInterface {
+//        override fun doAction() {
+//        }
+//
+//        override fun doAction2() {
+//        }
+//
+//    }
+
+    val action = MyInterface { }
+}
